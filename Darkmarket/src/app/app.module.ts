@@ -20,6 +20,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { LogoutComponent } from './logout/logout.component';
 
 registerLocaleData(en);
 
@@ -27,7 +28,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     DashboardComponent,
-    InicioComponent
+    InicioComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
