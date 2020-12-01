@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard/dashboard.component';
 import { InicioComponent } from './inicio/inicio/inicio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -21,15 +20,18 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { LogoutComponent } from './logout/logout.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+/// f
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
     InicioComponent,
-    LogoutComponent
+    LogoutComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,9 @@ registerLocaleData(en);
     NzInputModule,
     NzButtonModule,
     NzSelectModule,
-    NzToolTipModule
+    NzToolTipModule,
+    NzLayoutModule,
+    NzBreadCrumbModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
